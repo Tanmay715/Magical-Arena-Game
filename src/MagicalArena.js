@@ -1,4 +1,4 @@
-const Player = require('./src/player');
+const Player = require('./player');
 
 class MagicalArena {
     constructor(PlayerA, PlayerB) {
