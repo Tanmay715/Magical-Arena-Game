@@ -38,10 +38,10 @@ class MagicalArena {
         console.log(`Attack damage: ${attackValue}, Defense strength: ${defenceValue}`);
         console.log(`Player ${this.rollingPlayer == 'A'? 'B' : 'A'} health reduced to ${defender.health}\n`);
     
-        this.#nextTurn();
+        this.nextTurn();
     }
 
-    #nextTurn() {
+    nextTurn() {
         this.rollingPlayer = this.rollingPlayer == 'A' ? 'B' : 'A';
     }
 
