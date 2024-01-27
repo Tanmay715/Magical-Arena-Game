@@ -9,6 +9,7 @@ Install dependencies:
 
 npm install
 Run the game: node src/index.js
+Test the game: npm test
 
 Rules: 
 
