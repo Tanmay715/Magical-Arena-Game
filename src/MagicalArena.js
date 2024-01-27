@@ -1,4 +1,4 @@
-const Player = require('./player');
+const Player = require('./models/player');
 
 class MagicalArena {
     constructor(PlayerA, PlayerB) {

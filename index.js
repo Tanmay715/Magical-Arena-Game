@@ -1,5 +1,5 @@
 const readline = require('readline');
-const Player = require('./src/player');
+const Player = require('./src/models/player');
 const MagicalArena = require('./src/magicalArena');
 
 const rl = readline.createInterface({
