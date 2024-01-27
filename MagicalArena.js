@@ -8,7 +8,7 @@ class MagicalArena {
     }
 
     nextTurn() {
-        this.rollingPlayer = 'A' ? 'B' : 'A';
+        this.rollingPlayer = this.rollingPlayer == 'A' ? 'B' : 'A';
     }
 
     attackAndDefend() {
