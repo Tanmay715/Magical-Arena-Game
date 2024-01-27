@@ -6,7 +6,8 @@ class Player {
     }
 
     rollDice() {
-        return Math.random(Math.random() * 6) + 1;
+        const random_number = Math.floor(Math.random() * 6) + 1;
+        return random_number;
     }
 }
 

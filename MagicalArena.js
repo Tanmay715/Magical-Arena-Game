@@ -8,7 +8,7 @@ class MagicalArena {
     }
 
     nextTurn() {
-        this.rollingPlayer == 'A' ? 'B' : 'A';
+        this.rollingPlayer = 'A' ? 'B' : 'A';
     }
 
     attackAndDefend() {
@@ -23,15 +23,18 @@ class MagicalArena {
         const damageValue = Math.max(0, attackValue - defenceValue);
         defender.health -= damageValue;
 
-        console.log(`Player ${attacker === this.playerA ? 'A' : 'B'} attacks with roll ${attackValue}`);
-        console.log(`Player ${defender === this.playerA ? 'A' : 'B'} defends with roll ${defenceValue}`);
+        console.log(`Player ${this.rollingPlayer == 'A' ? 'A' : 'B'} attacks with roll ${attackNumber}`);
+        console.log(`Player ${this.rollingPlayer == 'A' ? 'B' : 'A'} defends with roll ${defenceNumber}`);
         console.log(`Attack damage: ${attackValue}, Defense strength: ${defenceValue}`);
-        console.log(`Player ${defender === this.playerA ? 'A' : 'B'} health reduced to ${defender.health}\n`);
+        console.log(`Player ${this.rollingPlayer == 'A'? 'B' : 'A'} health reduced to ${defender.health}\n`);
     
         this.nextTurn();
     }
 
     startGame() {
+        console.log(`Game Starts : 
+        Player A - Health :${this.PlayerA.health} , Strength : ${this.PlayerA.strength}, Attack: ${this.PlayerA.attack},
+        Player B - Health :${this.PlayerB.health} , Strength : ${this.PlayerB.strength}, Attack: ${this.PlayerB.attack} `)
         while (this.PlayerA.health > 0 && this.PlayerB.health > 0) {
             this.attackAndDefend();
         }
