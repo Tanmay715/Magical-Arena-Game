@@ -39,6 +39,8 @@ class MagicalArena {
             this.attackAndDefend();
         }
 
+        const winningPlayer = this.PlayerA.health < 0 ? 'PlayerB' : 'PlayerA';
+        console.log(`Wohoo! ${winningPlayer} won the game`);
     }
 
 }
